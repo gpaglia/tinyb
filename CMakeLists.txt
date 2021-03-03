@@ -32,7 +32,6 @@ message (INFO " - libtinyb Version ${VERSION}")
 #parse the version information into pieces.
 string (REGEX REPLACE "^v([0-9]+)\\..*" "\\1" VERSION_MAJOR "${VERSION}")
 string (REGEX REPLACE "^v[0-9]+\\.([0-9]+).*" "\\1" VERSION_MINOR "${VERSION}")
-string (REGEX REPLACE "^v[0-9]+\\.[0-9]+\\.([0-9]+).*" "\\1" VERSION_PATCH "${VERSION}")
 string (REGEX REPLACE "^v[0-9]+\\.[0-9]+\\.[0-9]+\\-(.*)" "\\1" VERSION_REST "${VERSION}")
 
 string(REPLACE "-" ";" VERSION_REST ${VERSION_REST})
